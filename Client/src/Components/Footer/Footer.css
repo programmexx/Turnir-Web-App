@@ -1,0 +1,36 @@
+.footersectionhome {
+  max-width: 90%;
+  margin: 50px auto;
+}
+
+.abouticonsdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aboutustxt {
+  text-align: left;
+  font-size: 25px;
+  color: #0473e5;
+}
+
+.aboutustxt:hover {
+  transform: scale(1.05);
+  text-shadow: 0 3px 12px #0473e5;
+  transition: all 0.3s ease-in;
+}
+
+.aboutandicons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.paddingrighticons {
+  padding-right: 30px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+}

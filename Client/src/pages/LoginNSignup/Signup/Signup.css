@@ -1,0 +1,224 @@
+
+
+.backleft {
+  justify-content: left;
+
+  @media screen and (max-width: 595px) {
+    justify-content: center;
+  }
+}
+
+.names-back {
+  position: absolute;
+  width: 150px;
+  height: 45px;
+  padding: 15px;
+  left: 110px;
+  margin: 10px 8px;
+  box-sizing: border-box;
+  background: #030405;
+  color: #fff;
+  border-width: 2px;
+  border-radius: 5px;
+}
+
+.names-back:hover {
+  border-color: #0473e5;
+}
+
+.left {
+  left: 55px;
+  top: 30%;
+}
+
+.right {
+  left: 215px;
+  top: 30%;
+}
+
+.email-back {
+  position: absolute;
+  width: 310px;
+  height: 45px;
+  padding: 15px;
+  left: 55px;
+  top: 40.5%;
+  margin: 10px 8px;
+  box-sizing: border-box;
+  background: #030405;
+  color: #fff;
+  outline: none;
+  border-radius: 5px;
+}
+
+.email-back:hover {
+  border-color: #0473e5;
+}
+
+input:-webkit-autofill + .labelsbackfields {
+  text-indent: -9999px !important;
+  padding: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+input:autofill + .labelsbackfields {
+  text-indent: -9999px !important;
+  padding: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.labelsbackfields {
+  position: absolute;
+  padding-left: 5px;
+  padding-right: 5px;
+  transition: 0.3s;
+  pointer-events: none;
+  font-size: 13.5px;
+}
+
+/* LABEL PLACEHOLDER FOR FIRST NAME  */
+
+.labelfname {
+  left: 73px;
+  top: 33.5%;
+}
+
+.firstnameip:focus ~ .labelsbackfields,
+.firstnameip:not(:placeholder-shown).firstnameip:not(:focus)
+  ~ .labelsbackfields {
+  top: 30.7%;
+  background-color: #030405;
+  font-size: 11.5px;
+}
+
+/* LABEL PLACEHOLDER FOR LAST NAME  */
+
+.labellname {
+  left: 233px;
+  top: 33.5%;
+}
+
+.lastnameip:focus ~ .labelsbackfields,
+.lastnameip:not(:placeholder-shown).lastnameip:not(:focus) ~ .labelsbackfields {
+  top: 30.7%;
+  background-color: #030405;
+  font-size: 11.5px;
+}
+
+/* LABEL PLACEHOLDER FOR SIGNUP EMAIL  */
+
+.labelemailback {
+  left: 73px;
+  top: 44%;
+}
+
+.emailbackip:focus ~ .labelsbackfields,
+.emailbackip:not(:placeholder-shown).emailbackip:not(:focus)
+  ~ .labelsbackfields {
+  top: 41.2%;
+  background-color: #030405;
+  font-size: 11.5px;
+}
+
+/* LABEL PLACE HOLDER FOR SIGNUP PASSWORD  */
+
+.labelbackpass {
+  left: 73px;
+  top: 57.5%;
+}
+
+.backpassip:focus ~ .labelsbackfields,
+.backpassip:not(:placeholder-shown).backpassip:not(:focus) ~ .labelsbackfields {
+  top: 54.8%;
+  background-color: #030405;
+  font-size: 11.5px;
+}
+
+/* LABEL PLACEHOLDER FOR CONFIRM PASSWORD  */
+
+.labelconfirm {
+  left: 233px;
+  top: 57.5%;
+}
+
+.confirmpassip:focus ~ .labelsbackfields,
+.confirmpassip:not(:placeholder-shown).confirmpassip:not(:focus)
+  ~ .labelsbackfields {
+  top: 54.8%;
+  background-color: #030405;
+  font-size: 11.5px;
+}
+
+.confirm-email {
+  position: absolute;
+  top: 50%;
+  left: 67px;
+  font-size: 11px;
+}
+
+.pass-left {
+  left: 55px;
+  top: 54%;
+}
+
+.pass-right {
+  left: 215px;
+  top: 54%;
+}
+
+.backp {
+  font-size: 18px;
+  bottom: 10.5%;
+  left: 190px;
+
+  @media screen and (max-width: 645px) {
+    font-size: 12px;
+    left: 4rem;
+  }
+}
+
+.backlabel {
+  bottom: 10.35%;
+  right: 182px;
+  cursor: pointer;
+
+  @media screen and (max-width: 400px) {
+    font-size: 12px;
+    right: 4rem;
+  }
+}
+
+.email-format {
+  font-size: 11px;
+  position: absolute;
+  left: 65px;
+  top: 64%;
+}
+
+.signupimg {
+  position: absolute;
+  top: 20%;
+  right: 0%;
+  max-width: 280px;
+  max-height: 480px;
+
+  @media screen and (max-width: 595px) {
+    display: none;
+  }
+}
+
+.back .button-login {
+  position: absolute;
+  bottom: 18.75%;
+  width: 25%;
+  background-color: #0473e5;
+  text-align: center;
+  left: 0%;
+  transform: translateX(150%);
+}
+
+

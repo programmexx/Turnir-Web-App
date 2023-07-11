@@ -1,0 +1,153 @@
+.front-text,
+.front-password {
+  position: absolute;
+  width: 500px;
+  height: 50px;
+  padding: 15px;
+  left: 112.5px;
+  margin: 10px 8px;
+  box-sizing: border-box;
+  background: #030405;
+  color: #fff;
+  border-radius: 5px;
+  border-width: 2px;
+
+  @media screen and (max-width: 645px) {
+    left: 60%;
+    width: 21rem;
+    transform: translateX(-50%);
+  }
+}
+
+.front-text:hover,
+.front-password:hover {
+  outline-color: transparent;
+  border-color: #0473e5;
+}
+
+.front-text:focus,
+.front-password:focus {
+  border-color: transparent;
+}
+
+input:-webkit-autofill + .labelsforfields {
+  text-indent: -9999px !important;
+  padding: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+input:autofill + .labelsforfields {
+  text-indent: -9999px !important;
+  padding: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.labelsforfields {
+  position: absolute;
+  padding-left: 5px;
+  padding-right: 5px;
+  transition: 0.3s;
+  left: 134.5px;
+  pointer-events: none;
+  font-size: 13.5px;
+}
+
+.labelemailfront {
+  top: 294.5px;
+
+  @media screen and (max-width: 645px) {
+    left: 49%;
+    transform: translateX(-50%);
+  }
+}
+
+.front-text:focus ~ .labelsforfields,
+.front-text:not(:placeholder-shown).front-text:not(:focus) ~ .labelsforfields {
+  top: 274.5px;
+  background-color: #030405;
+  font-size: 11.5px;
+}
+
+/* LABEL PLACEHOLDER FOR PASSWORD  */
+
+.labelpassfront {
+  top: 394.5px;
+
+  @media screen and (max-width: 645px) {
+    left: 49%;
+    transform: translateX(-50%);
+  }
+}
+
+.front-password:focus ~ .labelsforfields,
+.front-password:not(:placeholder-shown).front-password:not(:focus)
+  ~ .labelsforfields {
+  top: 374.5px;
+  background-color: #030405;
+  font-size: 11.5px;
+}
+
+.front-password {
+  top: 370px;
+}
+
+.front-text {
+  top: 270px;
+}
+
+.namesinputfieldkini {
+  position: relative;
+  top: 100%;
+}
+
+.passwordloginput {
+  position: relative;
+  top: -70px;
+  left: -7.5%;
+
+  @media screen and (max-width: 645px) {
+    left: -3rem;
+  }
+}
+
+.forgotpass {
+  position: absolute;
+  left: 11.5%;
+  top: 60%;
+  color: #0473e5;
+  cursor: pointer;
+  font-size: 13px;
+
+  @media screen and (max-width: 645px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.forgotpass:hover {
+  color: #0096ff;
+  transition: all 0.3s ease;
+}
+
+.flexaccount {
+  display: flex;
+  left: 9.6%;
+}
+
+.link-prescript {
+  position: absolute;
+  bottom: 10.5%;
+  font-size: 18px;
+  left: 29%;
+
+  @media screen and (max-width: 645px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 9px;
+  }
+}

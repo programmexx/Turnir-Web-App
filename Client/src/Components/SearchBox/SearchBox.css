@@ -1,0 +1,48 @@
+.searchboxdiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  position: relative;
+}
+
+.searchiconphoone {
+  color: #ffffff;
+  margin-top: 1rem;
+  position: absolute;
+
+  @media screen and (max-width: 2560px) {
+    margin-left: -32.5rem;
+  }
+
+  @media screen and (max-width: 630px) {
+    margin-left: -90%;
+  }
+}
+
+.searchbox {
+  background-color: transparent;
+  background-size: cover;
+  width: 584px;
+  height: 45px;
+  border-radius: 24px;
+  text-indent: 45px;
+  font-size: 18px;
+  margin-bottom: 2px;
+  font-weight: 600;
+  color: #ffffff;
+  border-color: #ffffff;
+  border-width: 2.5px;
+  border-style: solid;
+}
+
+.searchbox:hover {
+  border-width: 2.5px;
+  border-style: solid;
+  border-color: #0473e5;
+}
+.searchbox:focus {
+  border: 2.5px solid #0473e5 !important;
+  background-image: none;
+  background-color: transparent;
+  outline: none;
+}

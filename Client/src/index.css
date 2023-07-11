@@ -3,10 +3,6 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,56 +10,195 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
-a:hover {
-  color: #535bf2;
+
+/* RESPONSIVE DESIGN  */
+@media screen and (max-width: 1101px) {
+  .login-sign-nav,
+  .login-sign-nav button {
+    display: none;
+  }
+}
+
+/* LOGIN & SIGNUP PAGE */
+
+.front,
+.back {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #030405;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  perspective: 1500px;
+  border-radius: 5px;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.inner {
+  height: 100%;
+  width: 100%;
+
+  transform: translateZ(110px) scale(1);
+
+  @media screen and (max-width: 645px) {
+    transform: none;
+  }
+}
+
+.signupbtn {
+  position: absolute;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #0473e5;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  background-color: transparent;
+  font-weight: 700;
+  right: 28.5%;
+  bottom: 10.35%;
+
+  @media screen and (max-width: 645px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 9px;
+  }
+}
+
+.signupbtn:hover {
+  color: #04488e;
+}
+
+.logo-login-signup {
+  position: absolute;
+  inset: auto 0;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+}
+
+.h2logsign {
+  position: absolute;
+  top: 17.5%;
+  text-align: center;
+  left: 0;
+  right: 0;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.button-login {
+  position: absolute;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+
+  @media screen and (max-width: 645px) {
+    font-size: 14px;
+  }
+}
+
+.front .button-login {
+  position: absolute;
+  bottom: 21%;
+  width: 25%;
+  background-color: #0473e5;
+  text-align: center;
+  left: 0%;
+  transform: translateX(150%);
+}
+
+.button-login:hover {
+  box-shadow: 0 3px 12px #0473e5;
+}
+
+.inputfieldlog {
+  position: relative;
+  top: -60px;
+  left: -7.5%;
+
+  @media screen and (max-width: 645px) {
+    left: -3rem;
+  }
+}
+
+.icon-span {
+  position: relative;
+  opacity: 1;
+  right: 0%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 35px #030405 inset !important;
+}
+
+.if-formikerrors-email {
+  border-color: red;
+}
+.if-formikerrors-email:focus {
+  border-color: red;
+  outline: transparent;
+  outline-color: red;
+}
+
+.if-noformikerrors-email:focus {
+  border-color: #0473e5;
+  outline: transparent;
+  outline-color: #0473e5;
+}
+
+.labeltextred {
+  color: red;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #ffffff;
+}
+
+input {
+  cursor: auto;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  overflow-x: hidden;
+  height: 100vh;
+  background-color: #030405;
+  color: #ffffff;
+  position: relative;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+a {
+  text-decoration: none;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+li {
+  list-style: none;
+  text-decoration: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.showpasswordicon {
+  position: absolute;
 }

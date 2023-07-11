@@ -1,0 +1,268 @@
+.page-content {
+  padding-top: 110px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.firstdiv1 {
+  display: flex;
+  height: 100%;
+  width: auto;
+}
+
+.left-contentpg1 {
+  text-align: left;
+  margin-top: 77.5px;
+  position: relative;
+  max-width: 100%;
+
+  @media screen and (max-width: 1360px) {
+    margin: 77.5px auto;
+    text-align: center;
+  }
+}
+
+.ultimategaming {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 60px;
+  line-height: 1.7em;
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    font-size: 50px;
+  }
+}
+
+.rest1 {
+  margin-top: 25px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.7em;
+  text-align: center;
+}
+
+.upr1 {
+  margin-bottom: 35px;
+}
+
+.getstarted {
+  border: none;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 10px 20px;
+  width: 190px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: #0473e5;
+  box-shadow: 0 3px 12px #0473e5;
+  color: #ffffff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 40px auto;
+}
+
+.getstarted:hover {
+  transform: scale(1.05);
+  background-color: #0096ff;
+  transition: all 0.3s ease-in;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cardfirstpage {
+  position: absolute;
+  right: 23px;
+  top: 12.5%;
+  max-width: 900px;
+  max-height: 900px;
+
+  @media screen and (max-width: 1360px) {
+    display: none;
+  }
+}
+
+.cardfpimg {
+  width: 100%;
+  margin-top: 0%;
+  max-width: 900px;
+  max-height: 720px;
+}
+
+/* START OF POPULAR GAMES SECTION  */
+
+.s2ndpage {
+  margin-top: 22.5%;
+  width: auto;
+
+  @media screen and (max-width: 1101px) {
+    padding-top: 100px;
+  }
+}
+
+.populargames {
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: url("../src/assets/images/shinytextbackground.jpg");
+  background-size: cover;
+  color: transparent;
+
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 30px;
+  }
+}
+
+.populargames-icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  place-items: center;
+  margin-top: 20px;
+
+  @media screen and (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    row-gap: 20px;
+  }
+  @media screen and (max-width: 450px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    row-gap: 20px;
+  }
+}
+
+.card {
+  max-width: 300px;
+  max-height: 345px;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+}
+
+.codmpg {
+  width: 100%;
+}
+
+.chesspg {
+  width: 100%;
+}
+
+.pubgpg {
+  width: 100%;
+}
+
+.fifapg {
+  width: 100%;
+}
+
+.cantfindyourgame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.queryfrsmallerdevices {
+  top: 3rem;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+}
+
+.pcantgame {
+  padding-right: 25px;
+  margin-top: 10.5px;
+  font-size: 17px;
+}
+
+.createbtn {
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  padding-top: 10px;
+  margin-left: -10px;
+  color: #0473e5;
+  text-align: center;
+  text-decoration: none;
+  font-size: 22px;
+  background-color: transparent;
+  font-weight: 600;
+}
+
+.createbtn:hover {
+  transform: scale(1.05);
+
+  text-shadow: 0 3px 12px #0473e5;
+  transition: all 0.3s ease-in;
+}
+
+/* FEATURED GAMES PAGE  */
+
+.featuredgp {
+  margin-top: 50px;
+  width: auto;
+
+  @media screen and (max-width: 1101px) {
+    padding-top: 50px;
+  }
+}
+
+.featuredtext {
+  font-size: 60px;
+  font-weight: 1000;
+  text-align: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: url("../src/assets/images/featuredgamesimg.webp");
+  background-size: contain;
+  color: transparent;
+
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 30px;
+  }
+}
+
+.gameimagesdiv {
+  margin-top: 30px;
+  display: grid;
+  column-gap: 30px;
+  row-gap: 50px;
+  cursor: pointer;
+  object-fit: cover;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (max-width: 450px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gameimagesdiv img {
+  max-width: 350px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.gameimagesdiv a:hover {
+  transform: scale(1.07);
+  transition: all 0.3s ease-out;
+}
