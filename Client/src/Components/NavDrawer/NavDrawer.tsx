@@ -9,12 +9,8 @@ const NavDrawer = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   return (
     <div className="menuburger">
-      <IconButton>
-        <MenuIcon
-          fontSize="large"
-          className="menuburger"
-          onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-        />
+      <IconButton onClick={() => setIsDrawerOpen(!isDrawerOpen)}>
+        <MenuIcon fontSize="large" className="menuburger" />
       </IconButton>
 
       <Drawer
@@ -25,11 +21,8 @@ const NavDrawer = () => {
       >
         <Box p={2} width={"70vw"} textAlign="left" role="presentation">
           <div className="closeNav">
-            <IconButton>
-              <icon.CloseIcon
-                fontSize="large"
-                onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-              />
+            <IconButton onClick={() => setIsDrawerOpen(!isDrawerOpen)}>
+              <icon.CloseIcon fontSize="large" />
             </IconButton>
           </div>
           <ul className="navdrawerul">
