@@ -10,6 +10,7 @@ import "./Welcome.css";
 const Welcome = () => {
   // TILT ANIMATION OFFICIAL
   useEffect(() => {
+    // @ts-ignore
     VanillaTilt.init(document.querySelectorAll(".card"), {
       max: 12,
       speed: 9,

@@ -1,18 +1,38 @@
 .successpge {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center; */
+  display: grid;
+  place-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   text-align: center;
+
+  @media screen and (max-width: 680px) {
+    align-items: center;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+  }
 }
 
- .logosuccess {
-   margin: 0 auto;
-   width: 75px;
-   height: 75px;
- }
+.Confetti {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.logosuccess {
+  margin: 0 auto;
+  width: 65px;
+  height: 65px;
+}
 
 .greatjob {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 800;
   font-style: italic;
   margin-top: 25px;
@@ -22,7 +42,7 @@
 }
 
 .welcometodfam {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   margin-top: 25px;
   @media screen and (max-width: 768px) {
@@ -30,8 +50,9 @@
   }
 }
 
- .centerpsuc {
+.centerpsuc {
   margin-top: 25px;
+  font-size: 20px;
 }
 
 .btnsuccess {
@@ -47,4 +68,10 @@
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
+  outline: none;
+  border: none;
+}
+
+.btnsuccess:hover {
+  background-color: #0096ff;
 }
