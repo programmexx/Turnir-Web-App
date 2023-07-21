@@ -9,7 +9,7 @@ const Success = () => {
   const [pieces, setPieces] = useState(200);
   const location = useLocation();
   const values = location.state;
-  console.log(values);
+  // console.log(values);
 
   const stopConfetti = () => {
     setTimeout(() => {
@@ -22,7 +22,7 @@ const Success = () => {
   }, []);
 
   return (
-    <div>
+    <div className="success_container">
       <div className="successpge">
         <img className="logosuccess" src={image.ControllerLogo} alt="" />
         <h1 className="greatjob">
@@ -41,7 +41,7 @@ const Success = () => {
         <Button disabled={false} className="btnsuccess">
           Resend email
         </Button>
-        <Confetti gravity={0.2} numberOfPieces={pieces} />
+        <Confetti gravity={0.2} numberOfPieces={pieces} className="Confetti" />
       </div>
     </div>
   );

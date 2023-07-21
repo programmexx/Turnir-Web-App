@@ -4,6 +4,7 @@ import image from "../../../Components/image";
 import { useNavigate } from "react-router-dom";
 import Button from "../../../Components/Button/Button";
 import "./Signup.css";
+import axios from "axios";
 
 const Signup = () => {
   //Router
@@ -17,7 +18,7 @@ const Signup = () => {
       email: "",
       password: "",
       confirm_password: "",
-      show_password: "",
+      // show_password: "",
     },
 
     //Validate form
@@ -40,15 +41,38 @@ const Signup = () => {
       confirm_password: Yup.string()
         .oneOf([Yup.ref("password"), undefined], "Invalid password")
         .required("Confirm"),
-      show_password: Yup.array(),
+      // show_password: Yup.array(),
     }),
 
-    // Submit Form
-    onSubmit: (values) => {
+    // // Submit Form
+    // onSubmit: (values) => {
+    //   console.log(values);
+    //   // PUSH TO SUCESS PAGE
+    //   navigate("/success", { state: values });
+    //   // navigate(0);
+    // },
+
+    //New Submit Form
+    onSubmit: async (values) => {
+      await axios
+        .post("http://localhost:3000/api/auth/signup", values)
+        .then((response: any) => {
+          console.log(response.data);
+        })
+        .catch((error: any) => {
+          console.log(error);
+        });
       console.log(values);
       // PUSH TO SUCESS PAGE
       navigate("/success", { state: values });
-      navigate(0);
+
+      // response
+      //   .then(function (response: any) {
+      //     console.log(response);
+      //   })
+      //   .catch((error: any) => {
+      //     console.log(error);
+      //   });
     },
   });
 
