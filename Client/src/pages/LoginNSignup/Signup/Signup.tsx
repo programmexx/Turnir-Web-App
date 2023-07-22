@@ -56,15 +56,14 @@ const Signup = () => {
     onSubmit: async (values) => {
       await axios
         .post("http://localhost:3000/api/auth/signup", values)
-        .then((response: any) => {
+        .then((response) => {
           console.log(response.data);
+          navigate("/success", { state: values });
         })
-        .catch((error: any) => {
+        .catch((error) => {
           console.log(error);
         });
-      console.log(values);
       // PUSH TO SUCESS PAGE
-      navigate("/success", { state: values });
 
       // response
       //   .then(function (response: any) {
