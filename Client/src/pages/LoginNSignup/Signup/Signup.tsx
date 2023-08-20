@@ -16,6 +16,7 @@ const Signup = () => {
       first_name: "",
       last_name: "",
       email: "",
+      phone: "",
       password: "",
       confirm_password: "",
       // show_password: "",
@@ -32,6 +33,7 @@ const Signup = () => {
       email: Yup.string()
         .email("Invalid email address")
         .required("Email is required"),
+      phone: Yup.string().required("A phone number is required"),
       password: Yup.string()
         .required("Password")
         .matches(
@@ -44,34 +46,18 @@ const Signup = () => {
       // show_password: Yup.array(),
     }),
 
-    // // Submit Form
-    // onSubmit: (values) => {
-    //   console.log(values);
-    //   // PUSH TO SUCESS PAGE
-    //   navigate("/success", { state: values });
-    //   // navigate(0);
-    // },
-
     //New Submit Form
     onSubmit: async (values) => {
       await axios
         .post("http://localhost:3000/api/auth/signup", values)
         .then((response) => {
-          console.log(response.data);
+          console.log(response, values);
+          // PUSH TO SUCESS PAGE
           navigate("/success", { state: values });
         })
         .catch((error) => {
-          console.log(error);
+          console.log(error, error.response.data.msg);
         });
-      // PUSH TO SUCESS PAGE
-
-      // response
-      //   .then(function (response: any) {
-      //     console.log(response);
-      //   })
-      //   .catch((error: any) => {
-      //     console.log(error);
-      //   });
     },
   });
 
@@ -192,6 +178,28 @@ const Signup = () => {
                 <p className="confirm-email">
                   You’ll need to confirm that this email belongs to you
                 </p>
+
+                {/* Phone input field  */}
+                <div>
+                  <input
+                    className={`phoneif`}
+                    type="tel"
+                    name="tel"
+                    placeholder=""
+                    value={formiksign.values.phone}
+                    onChange={formiksign.handleChange}
+                    onBlur={formiksign.handleBlur}
+                  />
+
+                  {/* LABEL FOR Phone INPUT FIELD  */}
+
+                  <label
+                    htmlFor="tel"
+                    // className={}
+                  >
+                    {"Enter your Phone"}
+                  </label>
+                </div>
                 {/* PASSWORD INPUT FIELD  */}
                 <div>
                   <input
